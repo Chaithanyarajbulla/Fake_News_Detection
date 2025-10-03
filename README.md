@@ -64,13 +64,3 @@ Columns include: `title`, `text`, `subject`, `date`. We combine `title` and `tex
 
 ### 6. Prediction
 - Predict FAKE/REAL for new articles (single or multiple)
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/fake-news-detection.git
-cd fake-news-detection
