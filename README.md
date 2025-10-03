@@ -1,56 +1,69 @@
 # Fake News Detection Using Machine Learning
 
-A Machine Learning project to classify news articles as **FAKE** or **REAL** using Python, scikit-learn, and NLP techniques. This project includes data preprocessing, feature extraction with TF-IDF, model training, evaluation, and visualization with word clouds.
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.24-orange?logo=scikitlearn)
+![License](https://img.shields.io/badge/License-MIT-green)
 
----
-
-## 📌 Table of Contents
-
-- [Project Overview](#project-overview)  
-- [Dataset](#dataset)  
-- [Features](#features)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Model Evaluation](#model-evaluation)  
-- [Visualizations](#visualizations)  
-- [Contributing](#contributing)  
-- [License](#license)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1y_N9m-v499kiTFM6xL2lM4skMzvorwds?usp=drive_link)
 
 ---
 
 ## 📰 Project Overview
 
-Fake news has become a major problem in today's digital age. This project leverages Machine Learning to detect fake news by analyzing the text content. The pipeline includes:
+This project focuses on detecting **fake news** using **Machine Learning** and **Natural Language Processing (NLP)**. With the rise of misinformation online, automatically classifying news as **FAKE** or **REAL** is crucial.  
 
-1. Data loading and cleaning  
-2. Feature extraction using TF-IDF  
-3. Logistic Regression model training  
-4. Model evaluation (accuracy, confusion matrix, classification report)  
-5. Word cloud visualizations for FAKE vs REAL news  
-6. Predicting new news articles
+The project includes:  
+
+- Data preprocessing and cleaning  
+- TF-IDF feature extraction  
+- Logistic Regression model training  
+- Model evaluation (accuracy, confusion matrix, classification report)  
+- Visualizations (word clouds, class distribution, text length distribution)  
+- Prediction of new news articles  
 
 ---
 
 ## 📂 Dataset
 
-This project uses the **Fake and Real News Dataset** from Kaggle:
+We use the **Fake and Real News Dataset** from Kaggle:  
 
-- [Fake and Real News Dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)  
+- [Dataset Link](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)  
 
-The dataset contains two CSV files:
-
+**Files:**  
 - `Fake.csv` → FAKE news articles  
 - `True.csv` → REAL news articles  
 
-Each file contains columns: `title`, `text`, `subject`, `date`.  
+Columns include: `title`, `text`, `subject`, `date`. We combine `title` and `text` as the main feature for the model.
 
 ---
 
-## ✨ Features
+## 🔍 Methodology
 
-- **title + text** → Combined as the main text feature  
-- **label** → FAKE (0) or REAL (1)  
-- **text_length** → Number of characters in each news article  
+### 1. Data Preprocessing
+- Remove missing values  
+- Combine `title` and `text`  
+- Clean text: lowercase, remove special characters, extra spaces  
+
+### 2. Feature Extraction
+- TF-IDF Vectorization  
+- Stopword removal  
+
+### 3. Model Training
+- Logistic Regression classifier  
+- Train-test split (80/20)  
+
+### 4. Evaluation
+- Accuracy  
+- Confusion Matrix  
+- Classification Report  
+
+### 5. Visualization
+- Class distribution  
+- Text length distribution  
+- Word clouds for FAKE vs REAL news  
+
+### 6. Prediction
+- Predict FAKE/REAL for new articles (single or multiple)
 
 ---
 
